@@ -6,14 +6,13 @@ class Engine(object):
     def __init__ (self, map, inventory):
         #sets up recognized keywords.
         self.map = map
-        self.inventory = inventory
         self.movement_keywords = ["go", "n", "e", "s", "w"]
         self.inventory_keywords = dict({"take":"take", "pick":"take", "drop":"drop", "use":"use"})
         self.menu_keywords = ["quit", "help", "i", "inv"]
         self.look_keywords = ["look", "search"]
         
     def move_into(self, room_name):
-        #describes the new room
+#각주 필요함, 근데 못달았음
         self.room_name = room_name
         self.room = self.map.all_rooms[room_name]
         self.room.descriptor()
